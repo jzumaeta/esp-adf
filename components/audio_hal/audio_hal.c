@@ -32,6 +32,7 @@
 #include "es8374.h"
 #include "es8388.h"
 #include "zl38063.h"
+#include "ac101.h"
 
 static const char *TAG = "AUDIO_HAL";
 
@@ -76,6 +77,14 @@ static struct audio_hal audio_hal_codecs_default[] = {
         .audio_codec_config_iface = zl38063_config_i2s,
         .audio_codec_set_volume = zl38063_set_voice_volume,
         .audio_codec_get_volume = zl38063_get_voice_volume,
+    },
+    {
+        .audio_codec_initialize = ac101_init,
+        .audio_codec_deinitialize = ac101_deinit,
+        .audio_codec_ctrl = ac101_ctrl_state,
+        .audio_codec_config_iface = ac101_config_i2s,
+        .audio_codec_set_volume = ac101_set_voice_volume,
+        .audio_codec_get_volume = ac101_get_voice_volume,
     }
 };
 

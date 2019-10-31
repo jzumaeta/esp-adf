@@ -47,6 +47,10 @@ extern "C" {
 #include "lyratd_msc_v2_2_board.h"
 #endif
 
+#ifdef CONFIG_ESP_AI_AUDIO_V1_0_BOARD
+#include "ai_audio_v1_0_board.h"
+#endif
+
 #ifdef __cplusplus
 }
 #endif
